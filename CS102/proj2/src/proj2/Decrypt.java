@@ -24,39 +24,36 @@ package proj2;
  * @author Dale Reed
  */
 
-import java.util.Scanner;   // for user input
+import java.util.Scanner; // for user input
 
 public class Decrypt {
 
 	// declare Scanner for user input
-	Scanner keyboard = new Scanner( System.in);
-	
-	
+	Scanner keyboard = new Scanner(System.in);
+
 	// Don't write code in main, rather chain off to another
-	// method to avoid static errors.  This will make more
+	// method to avoid static errors. This will make more
 	// sense later in the semester.
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		Decrypt instance = new Decrypt();
 		instance.doIt();
-	}//end main()
-	
-	
+	}// end main()
+
 	// Write your code in the method below
-	void doIt()
-	{
+	void doIt() {
 		// display identifying information
 		System.out.println("Author: Dale Reed ");
 		System.out.println("TA: Sean Deitz, Wed 5am ");
 		System.out.println("Program: #2, Decrypt \n");
-		
+
 		// Prompt for and read in input
 		System.out.print("Enter input string: ");
 		String inputLine = keyboard.nextLine();
-		
+
 		// write your code here...
-		
+		System.out.println(inputLine);
+
 		System.out.println("Done with program.");
-	}//end doIt()
-	
-}//end class Decrypt
+	}// end doIt()
+
+}// end class Decrypt
