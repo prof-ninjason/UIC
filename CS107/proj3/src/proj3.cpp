@@ -8,6 +8,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
@@ -27,12 +28,28 @@ void foo(int &p) {
 }
 
 int main(void) {
+	time_t now, then;
+	double seconds;
+	// get the starting time
+	time(&now);
+
 	printAuthor(3);
 
 	int a = 7;
 	cout << "a: " << a << endl;
 	foo(a);
 	cout << "a: " << a << endl;
+
+	string name;
+	cout << "Enter your first name: " << name << endl;
+	cin >> name;
+	cout << name;
+
+
+	// get the ending time
+	time(&then);
+	seconds = difftime(then, now);
+	cout << ", this took " << seconds << " seconds." << endl;
 
 	return (0);
 }
